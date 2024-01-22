@@ -9,6 +9,8 @@ import { createWheat } from "./seeds/wheat.js"
 
 import { addPlant, usePlants } from "./field.js"
 
+import { plantSeeds } from "./tractor.js"
+
 console.log("Welcome to the main module")
 
 const yearlyPlan = createPlan()
@@ -21,7 +23,18 @@ console.log(asparagusSeed)
 const cornSeed = createCorn()
 console.log(cornSeed)
 
-addPlant(createPotato())
-addPlant(createCorn())
+// addPlant(createPotato())
+// addPlant(createCorn())
+
+// console.log(usePlants())
+
+// plantSeeds([
+//     ["Potato", "Soybean", "Soybean", "Corn"],
+//     ["Wheat", "Corn", "Wheat", "Asparagus"],
+//     ["Asparagus", "Wheat", "Soybean", "Corn"],
+//     ["Asparagus", "Soybean", "Potato", "Wheat"]
+// ])
+
+plantSeeds(yearlyPlan)
 
 console.log(usePlants())
