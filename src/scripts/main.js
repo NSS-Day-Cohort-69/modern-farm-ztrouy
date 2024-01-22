@@ -11,17 +11,19 @@ import { addPlant, usePlants } from "./field.js"
 
 import { plantSeeds } from "./tractor.js"
 
+import { harvestPlants } from "./harvester.js"
+
 console.log("Welcome to the main module")
 
 const yearlyPlan = createPlan()
 
 console.log(yearlyPlan)
 
-const asparagusSeed = createAsparagus()
-console.log(asparagusSeed)
+// const asparagusSeed = createAsparagus()
+// console.log(asparagusSeed)
 
-const cornSeed = createCorn()
-console.log(cornSeed)
+// const cornSeed = createCorn()
+// console.log(cornSeed)
 
 // addPlant(createPotato())
 // addPlant(createCorn())
@@ -38,3 +40,6 @@ console.log(cornSeed)
 plantSeeds(yearlyPlan)
 
 console.log(usePlants())
+
+console.log(harvestPlants(usePlants()))
+
