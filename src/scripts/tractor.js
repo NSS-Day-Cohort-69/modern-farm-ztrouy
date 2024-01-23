@@ -8,7 +8,7 @@ import { createSunflower } from "./seeds/sunflower.js"
 import { createWheat } from "./seeds/wheat.js"
 
 
-
+// Calls appropriate addPlant argument based on String input from Array 
 export const plantSeeds = (plantingPlan) => {
     for (const row of plantingPlan) {
         for (const column of row) {
