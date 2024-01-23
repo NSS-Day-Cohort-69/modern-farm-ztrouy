@@ -4,18 +4,14 @@ export const harvestPlants = (plantsArray) => {
     for (const plant of plantsArray) {
         let plantOutput = 0
 
-        if (plant.constructor === Array && plant[0].type === "Corn") {
-            plantOutput = plant[0].output
+        if (plant.type === "Corn") {
+            plantOutput = plant.output / 2
         } else {
             plantOutput = plant.output
         }
 
         for (let i = 0; i < plantOutput; i++) {
-            if (plant.constructor === Array && plant[0].type === "Corn") {
-                seeds.push(plant[0])
-            } else {
-                seeds.push(plant)
-            }
+            seeds.push(plant)
         }
     }
 
