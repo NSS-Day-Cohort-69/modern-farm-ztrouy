@@ -21,7 +21,7 @@ const yearlyPlan = createPlan()
 
 console.log(yearlyPlan)
 
-plantSeeds(plan)
+plantSeeds(yearlyPlan)
 
 console.log(usePlants())
 
