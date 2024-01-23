@@ -13,33 +13,19 @@ import { plantSeeds } from "./tractor.js"
 
 import { harvestPlants } from "./harvester.js"
 
+import { catalog } from "./catalog.js"
+
 console.log("Welcome to the main module")
 
 const yearlyPlan = createPlan()
 
 console.log(yearlyPlan)
 
-// const asparagusSeed = createAsparagus()
-// console.log(asparagusSeed)
-
-// const cornSeed = createCorn()
-// console.log(cornSeed)
-
-// addPlant(createPotato())
-// addPlant(createCorn())
-
-// console.log(usePlants())
-
-// plantSeeds([
-//     ["Potato", "Soybean", "Soybean", "Corn"],
-//     ["Wheat", "Corn", "Wheat", "Asparagus"],
-//     ["Asparagus", "Wheat", "Soybean", "Corn"],
-//     ["Asparagus", "Soybean", "Potato", "Wheat"]
-// ])
-
-plantSeeds(yearlyPlan)
+plantSeeds(plan)
 
 console.log(usePlants())
 
 console.log(harvestPlants(usePlants()))
 
+const mainHTML = document.querySelector(".container")
+mainHTML.innerHTML += catalog(harvestPlants(usePlants()))
