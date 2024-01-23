@@ -4,7 +4,6 @@ export const harvestPlants = (plantsArray) => {
     for (const plant of plantsArray) {
         let plantOutput = 0
 
-        debugger
         if (plant.constructor === Array && plant[0].type === "Corn") {
             plantOutput = plant[0].output
         } else {
